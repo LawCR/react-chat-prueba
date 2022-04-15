@@ -19,12 +19,12 @@ export const UserListContainer = styled.div<Props>`
     }
 `
 
-export const UserListTitle=styled.h1`
+export const UserListTitle=styled.h2`
     width: 100%;
     text-align: center;
     font-size: 1.3rem;
-    font-weight: lighter;
-    color: #fff;
+    font-weight: 100;
+    color: #ddd;
 `
 
 export const UserListItemContainer = styled.div`
@@ -32,4 +32,8 @@ export const UserListItemContainer = styled.div`
     width: 100%;
     height: calc(100% - 2rem);
     overflow-y: auto;
+
+    @media screen and (max-width: 650px) {
+        height: calc(100% - 4rem);
+    }
 `

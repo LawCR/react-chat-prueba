@@ -102,5 +102,10 @@ export const GroupListItemContainer=styled.div`
     width: 100%;
     height: calc(100% - 2rem);
     overflow-y: auto;
+
+    @media screen and (max-width: 650px) {
+        height: calc(100% - 2rem);
+        max-height: calc(100% - (calc(2rem + 160px)));
+    }
 `
 

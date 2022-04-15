@@ -14,6 +14,8 @@ export const Nav = styled.nav`
     align-items: center;
     font-weight: 700;
     padding: 0 20px 0 20px;
+
+    
 `
 // Los links del nav
 // export const NavLink = styled(Link)`
@@ -41,20 +43,17 @@ export const NavLink = styled.a`
             display: none;
     }
 `
-export const NavMenuGroups = styled.p`
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 100;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
+export const NavMenuGroups = styled.svg`
     display: none;
+    height: 35px;
+    width: 35px;
+    stroke: #fff;
+    background: linear-gradient(45deg, rgba(76, 57, 145,0.80), rgba(76, 57, 145,0.5) );
+    padding: 4px;
+    border-radius: 50%;
 
     @media screen and (max-width: 650px) {
         display: block;  
-        font-size: 1.6rem;
-        font-weight: 100;
     }
 `
 
@@ -69,13 +68,25 @@ export const NavMenuContainer = styled.div`
             display: block;
         }
     }
+    svg {
+        display: none;
+        height: 35px;
+        width: 35px;
+        stroke: #fff;
+        background: linear-gradient(45deg, rgba(76, 57, 145,0.80), rgba(76, 57, 145,0.5) );
+        padding: 4px;
+        border-radius: 50%;
+        @media screen and (max-width: 650px) {
+            display: block;
+        }
+    }
     div {
         display: flex;
         justify-content: space-around;
         align-items: center;
         
         @media screen and (max-width: 650px) {
-            display: none;
+            /* display: none; */
         }
 
         h2 {
@@ -83,14 +94,22 @@ export const NavMenuContainer = styled.div`
             font-weight: 100;
         }
     }
+
+    @media screen and (max-width: 650px) {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+    }
 `
 
 export const NavMenuUserImg = styled.img`
     height: 32px;
     width: 32px;
-    border-radius: 40%;
+    border-radius: 45%;
     margin-right: 2px;
 `
+
+
 export const NavInputContainer = styled.div`
    width: 45%;
    height: 30%;

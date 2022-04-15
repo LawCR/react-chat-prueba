@@ -4,6 +4,8 @@ Aplicación de chat usando solamente React con TypeScript, Redux y Local Storage
 
 ## Features
 
+![image](https://cdn.discordapp.com/attachments/839620709517230081/964631567685259274/unknown.png)
+
 ### Navbar
 
 -En modo de Escritorio contiene el nombre de la Aplicación y el usuario actual.\
@@ -35,8 +37,12 @@ Aplicación de chat usando solamente React con TypeScript, Redux y Local Storage
 ### Chat
 
 -El chat se mostrara cuando selecciones un grupo o usuario\
--Los mensajes del chat son almacenados en el localstorage asi que son persistentes.
+-Los mensajes del chat son almacenados en el localstorage asi que son persistentes.\
+-Se puede eliminar mensajes del chat seleccionado.
 
-### Responsive
+# Responsive
 
--Funcional en modo responsive.
+-Se puede acceder a toda la funcionalidad en modo responsive.
+
+![image](https://cdn.discordapp.com/attachments/839620709517230081/964631983248535612/unknown.png)
+

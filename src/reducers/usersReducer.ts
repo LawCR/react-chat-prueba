@@ -38,7 +38,7 @@ type UsersActionType =
 // Poder cambiar mi nick anonimo a uno propio
 // Buscar usuarios y grupos
 // Crear Chat grupales
-// todo: Eliminar mensajes
+// Eliminar mensajes
 
 //* Features
 // Chat Grupal por Categoria

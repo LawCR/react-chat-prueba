@@ -32,7 +32,7 @@ export const GroupList: FC<Props>  = ({modeMobile}) => {
   }
 
   const onCreateGroup = (group: string, category: string) => {
-    if (group.trim() === '' && category.trim() === '') return
+    if (group.trim() === '' || category.trim() === '') return
     dispatch(createGroup(group, category))
     setInputGroup('')
   }
@@ -40,7 +40,7 @@ export const GroupList: FC<Props>  = ({modeMobile}) => {
   return (
     <GroupListDiv mobile={modeMobile ? modeMobile : false }>
       <GroupListHeader>
-        <GroupTitle>GroupList</GroupTitle>
+        <GroupTitle>Lista de Grupos</GroupTitle>
         <IconPlus onClick={()=>setShow(!show)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />

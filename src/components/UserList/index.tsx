@@ -30,7 +30,7 @@ export const UserList: FC<Props> = ({modeMobile}) => {
   return (
     <UserListContainer mobile={modeMobile ? modeMobile : false }>
       <div>
-        <UserListTitle>User List</UserListTitle>
+        <UserListTitle>Lista de Usuarios</UserListTitle>
       </div>
       <Search search={search} setSearch={setSearch} onSearch={onSearch} />
       <UserListItemContainer>

@@ -73,14 +73,34 @@ export const ChatUsersImg = styled.img`
     align-self: flex-start;
 `
 
-export const ChatUsersName = styled.p`
+export const ChatUsersMessageContainer = styled.div`
     /* background-color: #4c3991; */
-    background: linear-gradient(45deg, rgba(76, 57, 145,0.80), rgba(76, 57, 145,0.5) );
+    background: linear-gradient(45deg, rgba(76, 57, 145,0.75), rgba(76, 57, 145,0.35) );
     border-radius: 10px;
-    font-size: 0.8rem;
-    font-weight: lighter;
     padding: 5px 10px 5px 10px;
     width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+
+    svg {
+        height: 20px;
+        width: 20px;
+        stroke: #A22142;
+        cursor: pointer;
+        align-self: start;
+
+        @media screen and (max-width: 650px) {
+            height: 22px;
+            width: 22px;
+        }
+    }
+`
+export const ChatUsersMessage = styled.p`
+    flex: 1;
+    font-size: 0.8rem;
+    font-weight: lighter;
 `
 
 export const ChatUsersDivText = styled.div`
@@ -120,3 +140,5 @@ export const ChatUserButton = styled.button`
         opacity: 0.9;
     }
 `
+
+
