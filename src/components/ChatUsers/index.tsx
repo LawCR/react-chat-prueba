@@ -30,6 +30,8 @@ export const ChatUsers = () => {
         inputRef.current?.focus()
     }
 
+    console.log(chatSelected)
+
     const onDeleteMessage = (messageId:string) => {
         if (!chatSelected) return
         console.log(chatSelected)
@@ -41,7 +43,12 @@ export const ChatUsers = () => {
         <CategoryList />
         <ChatUsersNameContainer>
 
-            <h2>{chatSelected?.name}</h2>
+            {
+                chatSelected ?
+                <h2>{chatSelected?.name}</h2>
+                :
+                <h2>Seleccione un usuario o grupo</h2>
+            }
             
         </ChatUsersNameContainer>
         <ChatUsersDivContainer>
@@ -69,8 +76,10 @@ export const ChatUsers = () => {
                     ref={inputRef} rows={2}  placeholder='Escribe un mensaje aquí'
                     value={newMessage} name='newMessage' onChange={(e) => setNewMessage(e.target.value)} 
                     onKeyDown={(e) => e.key === 'Enter' ? onCreateMessage(newMessage, e) : null}
+                    // disabled={chatSelected ? false : true}
+                    readOnly={chatSelected ? false : true}
                 />  
-                <ChatUserButton onClick={(e) => onCreateMessage(newMessage, e)}>Send</ChatUserButton>
+                <ChatUserButton disabled={chatSelected ? false : true} onClick={(e) => onCreateMessage(newMessage, e)}>Send</ChatUserButton>
             </ChatUsersDivText>
         </ChatUsersDivContainer>
         
